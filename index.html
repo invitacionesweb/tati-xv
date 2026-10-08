@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Tati</title>
+</head>
+<body>
+    <header class="parallax" id="parallax">
+       <div class="frenteflores">
+
+       </div>
+
+       <img class="arrowdoble" src="./figuras/icons8-doble-izquierda-64.png" alt="">
+
+    </header>
+
+    <div class="audiodiv">
+        <audio id="myAudio" preload="none">
+            <source src="./onedirecction.mp3" type="audio/mpeg">
+        </audio>
+        <div id="playPauseBtn" class="play">
+            <img src="./figuras/notamusical.png" alt="Icono de música">
+        </div>
+    </div>
+    <h2 class="titulocontador">PREPARATE, FALTAN:</h2>
+    <div class="contador">
+
+        <div class="bloque">
+          <div id="dias" class="numero"></div>
+          <div class="etiqueta">Días</div>
+        </div>
+
+        <div class="bloque">
+          <div id="horas" class="numero"></div>
+          <div class="etiqueta">horas</div>
+        </div>
+
+        <div class="bloque">
+          <div id="minutos" class="numero"></div>
+          <div class="etiqueta">minutos</div>
+        </div>
+
+        <div class="bloque">
+          <div id="segundos" class="numero"></div>
+          <div class="etiqueta">segundos</div>
+        </div>
+    </div>
+
+    <div class="ubicacion">
+        <div class="ubicacion-bloque">
+            <img   data-aos="fade-up"  class="icon"   src="./figuras/fiesta.png" alt="fiesta">
+            <h2  data-aos="fade-up"  >FIESTA</h2>
+            <br>
+            <img  data-aos="fade-up"  class="datos" src="./img/fecha.png" alt="15 de mayo">
+            <p  data-aos="fade-up"  ><strong>La Menorquina Eventos</strong> <br>
+              Av. Maipú 251<br> Hacé clic para saber cómo llegar </p>
+            <a  data-aos="fade-up" target="_blank"  class="boton" href="https://www.google.com/maps/search/?api=1&query=La+Menorquina+Eventos+Av.+Maipu+251">CÓMO LLEGAR</a>
+        </div>
+    </div>
+
+
+   <div   class="dresscode">
+        <img  data-aos="fade-up"  class="icon"  src="./figuras/monno.png" alt="dress code">
+        <h2  data-aos="fade-up"  >DRESS CODE</h2>
+        <p  data-aos="fade-up" >Elegante sport</p>
+    </div>
+
+
+   <div class="caja">
+        <div  class="ubicacion-bloque dos" >
+            <img  data-aos="fade-up"  class="icon"  src="./figuras/giftcard.png" alt="tarjeta">
+            <h2  data-aos="fade-up" >VALOR DE LA TARJETA</h2>
+            <p  data-aos="fade-up" >
+              Tu asistencia se confirma abonando el valor de la tarjeta:</p>
+            <p  data-aos="fade-up" >
+              <strong>Mayores:</strong> $100.000<br>
+              <strong>Adolescentes:</strong> $45.000<br>
+              <strong>Niños:</strong> $20.000
+            </p>
+           <br>
+              <a  data-aos="fade-up"  class="boton" onclick="copyToClipboard('tati.15.pay')">ALIAS</a> <br>
+          <br>
+            <p  data-aos="fade-up" >Hacé clic para copiar el alias.<br>Titular: Adriana Noemí Pino</p>
+        </div>
+    </div>
+
+
+<div  class="forms" >
+    <img  data-aos="fade-up"  class="icon" src="./figuras/asistencia.png" alt="asistencia">
+
+
+  <form name="asistenciaform" method="POST" action="" class="formulario">
+
+    <label data-aos="fade-up" class="formtitle">¿Venís? Confirmame tu asistencia <br> antes del 1 de abril</label>
+
+    <div class="radio-group">
+        <label class="radio-option">
+        <input type="radio" name="ASISTENCIA" value="sí" required />
+        <span>Sí</span>
+        </label>
+        <label class="radio-option">
+        <input type="radio" name="ASISTENCIA" value="no" />
+        <span>No</span>
+        </label>
+    </div>
+
+    <input type="text" name="NOMBRE" placeholder="Nombre" required />
+    <input type="text" name="APELLIDO" placeholder="Apellido" required />
+    <select name="DIETA" required>
+        <option value="" disabled selected>¿Alguna dieta especial?</option>
+        <option value="Nada">Nada / Como de todo</option>
+        <option value="Vegetariano">Vegetariano</option>
+        <option value="Vegano">Vegano</option>
+        <option value="Celíaco">Celíaco</option>
+    </select>
+    <select name="TARJETA" required>
+        <option value="" disabled selected>¿Abonaste la tarjeta?</option>
+        <option value="Sí">Sí</option>
+        <option value="Aún no">Aún no</option>
+    </select>
+
+    <textarea name="MENSAJE" placeholder="Dejale un mensaje a Tati" ></textarea>
+    <textarea name="CANCION" placeholder="Recomendale una canción al DJ 🎶" ></textarea>
+
+    <button type="submit" class="boton3">ENVIAR</button>
+</form>
+</div>
+
+
+    <div class="end">
+      <div class="end-names">
+        <img  data-aos="fade-in"  src="./figuras/endnames.png" alt="Tati">
+      </div>
+    </div>
+    <footer>
+      <div class="contenido">
+       <div>
+         <img src="./img/logosiquiero.png" alt="icono si quiero">
+           <p>Hecho con &hearts; <br>
+           &#169 <b>Si,quiero!</b> - invitaciones inteligentes.
+           <br> Todos los derechos reservados.</p>
+       </div>
+
+       <div class="contenido-list">
+           <ul>
+               <li><a target="_blank" href="https://www.instagram.com/siquiero.arg/"><i class="bi bi-instagram"></i></a></li>
+               <li><a target="_blank" href="https://www.facebook.com/Invitaciones-web-112187784608681"><i class="bi bi-facebook"></i></a></li>
+               <li><a target="_blank" href="mailto:siquiero.invitaciones@gmail.com"><i class="bi bi-envelope"></i></a></li>
+             </ul>
+       </div>
+      </div>
+
+   </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const audio = document.getElementById("myAudio");
+
+        // Escucha el primer scroll
+        const playOnScroll = () => {
+          audio.play().catch(e => {
+            console.warn("El navegador bloqueó la reproducción automática", e);
+          });
+          document.removeEventListener("scroll", playOnScroll); // Se ejecuta solo una vez
+        };
+
+        document.addEventListener("scroll", playOnScroll);
+      });
+    </script>
+
+    <script>
+      const parallax = document.getElementById("parallax");
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        parallax.style.backgroundPositionY = `${scrollY * 0.5}px`; /* Ajusta la velocidad con 0.5 */
+      });
+    </script>
+
+     <script>
+        function copyToClipboard(text) {
+           const tempInput = document.createElement("input");
+           document.body.appendChild(tempInput);
+           tempInput.value = text;
+           tempInput.select();
+           document.execCommand("copy");
+           document.body.removeChild(tempInput);
+           alert(`Copiaste el alias "${text}" a tu portapapeles`);
+         }
+       </script>
+      <script src="reproductor.js"></script>
+      <script src="form.js"></script>
+      <script src="script.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+    </script>
+</body>
+</html>
