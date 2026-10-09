@@ -1,5 +1,5 @@
 // Establecer la fecha de destino
-const fechaDestino = new Date("2025-05-15T23:59:59");
+const fechaDestino = new Date("2027-05-15T23:59:59");
 
 // Variable para almacenar el ID del intervalo
 let intervalo;
